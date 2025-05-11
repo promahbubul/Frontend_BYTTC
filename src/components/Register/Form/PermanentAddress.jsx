@@ -2,7 +2,7 @@ import { Input, TextArea } from "../../ui";
 
 const PermanentAddress = () => {
   return (
-    <div className="col-span-6  bg-slate-700 shadow-md shadow-green-900 rounded-md mt-5 ">
+    <div className="col-span-12 md:col-span-6  bg-slate-700 shadow-md shadow-green-900 rounded-md mt-5 ">
       <h4 className="border-b-2 p-5 border-b-green-600 pb-1 font-bold text-xl text-green-400">
         Permanent Address
       </h4>

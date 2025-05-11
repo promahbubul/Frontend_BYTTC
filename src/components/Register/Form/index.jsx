@@ -24,7 +24,7 @@ const Form = ({ handleSubmit, gender, setGender, setPhoto, setSignature }) => {
   return (
     <div className="px-10 pb-10 min-h-[calc(100vh-248px)]">
       <form onSubmit={handleSubmit} className="">
-        <div className="flex flex-row gap-4 items-center justify-end mb-10">
+        <div className="flex flex-col md:flex-row gap-4  md:items-center justify-end mb-5 md:mb-10">
           <h3 className="text-green-500 font-bold text-xl">
             Select Course: <span className="text-error ">*</span>{" "}
           </h3>
@@ -36,7 +36,7 @@ const Form = ({ handleSubmit, gender, setGender, setPhoto, setSignature }) => {
               )
             }
             name="course"
-            className="select course"
+            className="select course w-full md:w-auto  select-success"
           >
             <option selected disabled={true}>
               Select your course
@@ -51,14 +51,14 @@ const Form = ({ handleSubmit, gender, setGender, setPhoto, setSignature }) => {
         <div className="grid grid-cols-12 gap-3 items-center">
           <Input
             name={"nameBangla"}
-            className={"col-span-6"}
+            className={" col-span-12 md:col-span-6"}
             ledend={"Full Name (Bangla): "}
             placeholder={"Enter your name in Bangla"}
             required={true}
           />
           <Input
             name={"nameEnglish"}
-            className={"col-span-6"}
+            className={"col-span-12 md:col-span-6"}
             ledend={"Ful Name (English): "}
             placeholder={"Enter your you name in English"}
             capitalize={true}
@@ -77,7 +77,7 @@ const Form = ({ handleSubmit, gender, setGender, setPhoto, setSignature }) => {
                   type="checkbox"
                   checked={gender === "male" ? true : false}
                   id="male"
-                  className="checkbox checkbox-primary ml-3"
+                  className="checkbox checkbox-success ml-3"
                 />
               </label>
               <label
@@ -90,12 +90,12 @@ const Form = ({ handleSubmit, gender, setGender, setPhoto, setSignature }) => {
                   type="checkbox"
                   id="female"
                   checked={gender === "female" ? true : false}
-                  className="checkbox checkbox-primary ml-3"
+                  className="checkbox checkbox-success ml-3"
                 />
               </label>
             </div>
           </fieldset>
-          <div className="col-span-4">
+          <div className="col-span-12 md:col-span-4">
             <SelectOption
               name={"bloogGroup"}
               label={"select your blood group"}
@@ -106,7 +106,7 @@ const Form = ({ handleSubmit, gender, setGender, setPhoto, setSignature }) => {
           <Input
             required={true}
             name={"fatherName"}
-            className={"col-span-6"}
+            className={"col-span-12 md:col-span-6"}
             ledend={"Father Name (English): "}
             placeholder={"Enter your you name in English"}
             capitalize={true}
@@ -114,7 +114,7 @@ const Form = ({ handleSubmit, gender, setGender, setPhoto, setSignature }) => {
           <Input
             required={true}
             name={"motherName"}
-            className={"col-span-6"}
+            className={"col-span-12 md:col-span-6"}
             ledend={"Mother Name (English): "}
             placeholder={"Enter your you name in English"}
             capitalize={true}
@@ -122,21 +122,21 @@ const Form = ({ handleSubmit, gender, setGender, setPhoto, setSignature }) => {
           <Input
             required={true}
             name={"dateOfBirth"}
-            className={"col-span-2"}
+            className={"col-span-12 md:col-span-2"}
             ledend={"Date of Birth: "}
             placeholder={"Enter your date of birth"}
             type={"date"}
           />
           <Input
             name={"birthRegistrationNumber"}
-            className={"col-span-6"}
+            className={"col-span-12 md:col-span-6"}
             ledend={"Birth registration number: "}
             placeholder={"Enter your birth registration number"}
             type={"number"}
           />
           <Input
             name={"nid"}
-            className={"col-span-4"}
+            className={"col-span-12 md:col-span-4"}
             ledend={"NID Number: "}
             placeholder={"Enter your NID number"}
             type={"number"}
@@ -146,14 +146,14 @@ const Form = ({ handleSubmit, gender, setGender, setPhoto, setSignature }) => {
           <div className="mt-2 col-span-12"></div>
           <Input
             name={"email"}
-            className={"col-span-4"}
+            className={"col-span-12 md:col-span-4"}
             ledend={"Email: "}
             placeholder={"Enter your email"}
             type={"email"}
           />
           <Input
             name={"phone"}
-            className={"col-span-4"}
+            className={"col-span-12 md:col-span-4"}
             ledend={"Phone: "}
             placeholder={"Enter your phone"}
             type={"number"}
@@ -161,7 +161,7 @@ const Form = ({ handleSubmit, gender, setGender, setPhoto, setSignature }) => {
           />
           <Input
             name={"guardianPhone"}
-            className={"col-span-4"}
+            className={"col-span-12 md:col-span-4"}
             ledend={"Father / Mother Phone: "}
             placeholder={"Enter guardian phone number"}
           />
