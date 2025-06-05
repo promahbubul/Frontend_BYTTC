@@ -19,7 +19,7 @@ const Form = ({ handleSubmit, gender, setGender, setPhoto, setSignature }) => {
       .get("/courses")
       .then((result) => setCourses(result?.data?.data))
       .catch((err) => console.error(err));
-  }, []);
+  }, [publicAxios]);
 
   return (
     <div className="px-10 pb-10 min-h-[calc(100vh-248px)]">
